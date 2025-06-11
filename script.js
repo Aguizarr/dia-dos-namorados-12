@@ -1,14 +1,28 @@
+ let tentativas = 0;
+
+  const dicas = [
+  "Dica 1: Palavra que não pode faltar no BOA NOITE...",
+  "Dica 2: + um animal que te representa kkk❤️",
+  "Dica 3: + dia que passei vergonha indo conhecer sua familia inteira kk (dia-mês-ano) ✨",
+  "Dica 4: + minha comida favorita 😴💘",
+  "Dica 5: + complete a frase (Meu namorado é _____ mas eu ___ ele)😴💘",
+  "Dica 6: Agora só juntar todas a respostas"
+  ];
+
 function validarLogin() {
   const nome = document.getElementById('nome').value.toLowerCase().trim();
   const senha = document.getElementById('senha').value;
+  
 
   // Coloque o nome exato que sua namorada deve digitar, exemplo "Bruna"
-  if (nome === "bruna" && senha === "teamo1112") {
+  if (nome === "bruna" && senha === "teamopreguiça24122024churrascochatoamo") {
     mostrarMensagem();
   } else {
-    document.getElementById('erro').innerText =
-      "Nome ou senha incorretos 😢 Dica: Palavra que não pode faltar no BOA NOITE + Dia e Mês do começo do namoro";
+    const dicaAtual = dicas[tentativas % dicas.length]; // pega uma dica cíclica
+    document.getElementById('erro').innerText = `Nome ou senha incorretos 😢\n${dicaAtual}`;
+    tentativas++; // incrementa as tentativas
   }
+
   return false; // impede o envio do formulário
 }
 
