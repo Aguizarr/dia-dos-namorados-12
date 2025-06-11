@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Dia dos Namorados</title>
+
+  <!-- Fonte romântica -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"/>
+  
+  <!-- Ícone da aba -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico.png"/>
+  
+  <!-- Estilo principal -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>💘 Feliz Dia dos Namorados 💘</h1>
+    
+    <!-- Formulário de login -->
+    <form onsubmit="return validarLogin()">
+      <input type="text" id="nome" placeholder="Digite seu 1º nome" required>
+      <input type="password" id="senha" placeholder="Digite a senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+    
+    <!-- Exibe erros -->
+    <p class="erro" id="erro"></p>
+  </div>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
